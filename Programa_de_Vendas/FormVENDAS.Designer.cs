@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelVALORTOTAL = new System.Windows.Forms.Label();
             this.dataGridViewvendaRealizada = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,22 +44,11 @@
             this.buttonNOVAVENDA = new System.Windows.Forms.Button();
             this.labelIDVENDA = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelVALORTOTAL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewvendaRealizada)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVENDA)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelVALORTOTAL
-            // 
-            this.labelVALORTOTAL.BackColor = System.Drawing.Color.White;
-            this.labelVALORTOTAL.Font = new System.Drawing.Font("Impact", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVALORTOTAL.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelVALORTOTAL.Location = new System.Drawing.Point(475, 380);
-            this.labelVALORTOTAL.Name = "labelVALORTOTAL";
-            this.labelVALORTOTAL.Size = new System.Drawing.Size(176, 50);
-            this.labelVALORTOTAL.TabIndex = 1;
-            this.labelVALORTOTAL.Text = "R$ 1.500,00";
-            this.labelVALORTOTAL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewvendaRealizada
             // 
@@ -246,11 +234,22 @@
             this.label4.Text = "Código do Produto:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelVALORTOTAL
+            // 
+            this.labelVALORTOTAL.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVALORTOTAL.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelVALORTOTAL.Location = new System.Drawing.Point(485, 380);
+            this.labelVALORTOTAL.Name = "labelVALORTOTAL";
+            this.labelVALORTOTAL.Size = new System.Drawing.Size(166, 48);
+            this.labelVALORTOTAL.TabIndex = 15;
+            this.labelVALORTOTAL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormVENDAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 473);
+            this.Controls.Add(this.labelVALORTOTAL);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelIDVENDA);
             this.Controls.Add(this.buttonNOVAVENDA);
@@ -263,7 +262,6 @@
             this.Controls.Add(this.buttonADICIONAR);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewvendaRealizada);
-            this.Controls.Add(this.labelVALORTOTAL);
             this.Name = "FormVENDAS";
             this.Text = "Vendas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewvendaRealizada)).EndInit();
@@ -276,7 +274,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label labelVALORTOTAL;
         private System.Windows.Forms.DataGridView dataGridViewvendaRealizada;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewVENDA;
@@ -293,6 +290,7 @@
         private System.Windows.Forms.Button buttonNOVAVENDA;
         private System.Windows.Forms.Label labelIDVENDA;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelVALORTOTAL;
     }
 }
 

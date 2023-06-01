@@ -19,6 +19,7 @@ namespace Programa_de_Vendas
 
         string qualGRID = "";
         string vendaATIVA = "";
+        double valor = 0;
 
         public FormVENDAS()
         {
@@ -58,6 +59,7 @@ namespace Programa_de_Vendas
                 {
                     dataGridViewvendaRealizada.DataSource = tabelaGRID;
                 }
+                
 
             }
             catch (Exception erro_Mysql)
@@ -130,6 +132,11 @@ namespace Programa_de_Vendas
             }
             MessageBox.Show("Produto adicionado com sucesso!");
             listarGRIDS();
-        }
+            
+            double valortotal = double.Parse(dataGridViewvendaRealizada.CurrentRow.Cells[2].Value.ToString());
+
+            valor = valor + valortotal;
+            labelVALORTOTAL.Text = valor.ToString();
+        }       
     }
 }
