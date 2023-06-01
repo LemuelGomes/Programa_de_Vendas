@@ -63,6 +63,16 @@ namespace Programa_de_Vendas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1014 {
+            get {
+                object obj = ResourceManager.GetObject("1014", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lupa {
             get {
                 object obj = ResourceManager.GetObject("lupa", resourceCulture);
