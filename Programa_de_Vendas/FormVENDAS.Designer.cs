@@ -39,10 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelDATA = new System.Windows.Forms.Label();
-            this.buttonVENDA = new System.Windows.Forms.Button();
+            this.buttonADICIONAR = new System.Windows.Forms.Button();
             this.buttonFINALIZAR = new System.Windows.Forms.Button();
             this.buttonCANCELAR = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonNOVAVENDA = new System.Windows.Forms.Button();
+            this.labelIDVENDA = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewvendaRealizada)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVENDA)).BeginInit();
@@ -123,7 +125,7 @@
             // comboBoxCLIENTES
             // 
             this.comboBoxCLIENTES.FormattingEnabled = true;
-            this.comboBoxCLIENTES.Location = new System.Drawing.Point(447, 38);
+            this.comboBoxCLIENTES.Location = new System.Drawing.Point(447, 35);
             this.comboBoxCLIENTES.Name = "comboBoxCLIENTES";
             this.comboBoxCLIENTES.Size = new System.Drawing.Size(204, 21);
             this.comboBoxCLIENTES.TabIndex = 6;
@@ -161,18 +163,19 @@
             this.labelDATA.TabIndex = 9;
             this.labelDATA.Text = "30/05/2023 - 20:05";
             // 
-            // buttonVENDA
+            // buttonADICIONAR
             // 
-            this.buttonVENDA.BackColor = System.Drawing.Color.Transparent;
-            this.buttonVENDA.BackgroundImage = global::Programa_de_Vendas.Properties.Resources.seta_direita__1_;
-            this.buttonVENDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonVENDA.FlatAppearance.BorderSize = 0;
-            this.buttonVENDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVENDA.Location = new System.Drawing.Point(298, 104);
-            this.buttonVENDA.Name = "buttonVENDA";
-            this.buttonVENDA.Size = new System.Drawing.Size(66, 287);
-            this.buttonVENDA.TabIndex = 5;
-            this.buttonVENDA.UseVisualStyleBackColor = false;
+            this.buttonADICIONAR.BackColor = System.Drawing.Color.Transparent;
+            this.buttonADICIONAR.BackgroundImage = global::Programa_de_Vendas.Properties.Resources.seta_direita__1_;
+            this.buttonADICIONAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonADICIONAR.FlatAppearance.BorderSize = 0;
+            this.buttonADICIONAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonADICIONAR.Location = new System.Drawing.Point(298, 104);
+            this.buttonADICIONAR.Name = "buttonADICIONAR";
+            this.buttonADICIONAR.Size = new System.Drawing.Size(66, 287);
+            this.buttonADICIONAR.TabIndex = 5;
+            this.buttonADICIONAR.UseVisualStyleBackColor = false;
+            this.buttonADICIONAR.Click += new System.EventHandler(this.buttonADICIONAR_Click);
             // 
             // buttonFINALIZAR
             // 
@@ -204,35 +207,60 @@
             this.buttonCANCELAR.Text = "Cancelar Venda";
             this.buttonCANCELAR.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonNOVAVENDA
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(291, 36);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Nova Venda";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonNOVAVENDA.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonNOVAVENDA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonNOVAVENDA.FlatAppearance.BorderSize = 0;
+            this.buttonNOVAVENDA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNOVAVENDA.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNOVAVENDA.ForeColor = System.Drawing.Color.White;
+            this.buttonNOVAVENDA.Location = new System.Drawing.Point(1, 393);
+            this.buttonNOVAVENDA.Name = "buttonNOVAVENDA";
+            this.buttonNOVAVENDA.Size = new System.Drawing.Size(291, 36);
+            this.buttonNOVAVENDA.TabIndex = 12;
+            this.buttonNOVAVENDA.Text = "Nova Venda";
+            this.buttonNOVAVENDA.UseVisualStyleBackColor = false;
+            this.buttonNOVAVENDA.Click += new System.EventHandler(this.buttonNOVAVENDA_Click);
+            // 
+            // labelIDVENDA
+            // 
+            this.labelIDVENDA.BackColor = System.Drawing.Color.White;
+            this.labelIDVENDA.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIDVENDA.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.labelIDVENDA.Location = new System.Drawing.Point(535, 70);
+            this.labelIDVENDA.Name = "labelIDVENDA";
+            this.labelIDVENDA.Size = new System.Drawing.Size(49, 24);
+            this.labelIDVENDA.TabIndex = 13;
+            this.labelIDVENDA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(370, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 24);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Código do Produto:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormVENDAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 473);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelIDVENDA);
+            this.Controls.Add(this.buttonNOVAVENDA);
             this.Controls.Add(this.buttonCANCELAR);
             this.Controls.Add(this.buttonFINALIZAR);
             this.Controls.Add(this.labelDATA);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxCLIENTES);
-            this.Controls.Add(this.buttonVENDA);
+            this.Controls.Add(this.buttonADICIONAR);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewvendaRealizada);
             this.Controls.Add(this.labelVALORTOTAL);
@@ -254,7 +282,7 @@
         private System.Windows.Forms.DataGridView dataGridViewVENDA;
         private System.Windows.Forms.Button buttonPESQUISAR;
         private System.Windows.Forms.TextBox textBoxPESQUISA;
-        private System.Windows.Forms.Button buttonVENDA;
+        private System.Windows.Forms.Button buttonADICIONAR;
         private System.Windows.Forms.ComboBox comboBoxCLIENTES;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -262,7 +290,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonFINALIZAR;
         private System.Windows.Forms.Button buttonCANCELAR;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonNOVAVENDA;
+        private System.Windows.Forms.Label labelIDVENDA;
+        private System.Windows.Forms.Label label4;
     }
 }
 
